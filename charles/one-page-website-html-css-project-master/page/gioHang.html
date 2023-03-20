@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/gioHang.css">
+  <title>	charles.com</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="./gioHang.css" rel="stylesheet">
+  <style>
+    .highlight-window {
+  height: 559px;
+  width: 400px;
+  background: #ccc;
+  background: url('../img/aonam.png');
+  background-size: cover;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position:relative;
+  background-position:center top;
+}
+  </style>
+</head>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>c</span>har<span>l</span>es</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../index.html" data-after="Home">Home</a></li>
+            <li><a href="../index.html" data-after="Service">Gift</a></li>
+            <li><a href="../index.html" data-after="Projects">Product</a></li>
+            <li><a href="../index.html" data-after="About">About</a></li>
+            <li><a href="../index.html" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+        <a href="#contact">
+        <img class="gioHang" src="../img/kisspng-shopping-cart-software-computer-icons-5ade529492a245.5910015815245195726006.png">
+      </a>
+        <form action="" class="search-bar">
+          <input type="search" name="search" pattern=".*\S.*" placeholder="Search..." required>
+          <button class="search-btn" type="submit">
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+  <!-- The Modal -->
+</header>
+<div class="dau">
+    <article>
+<div class="modal-body">
+  <br>
+  <br>
+  <br>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Product</span>
+                        <span class="cart-price cart-header cart-column">Price</span>
+                        <span class="cart-quantity cart-header cart-column">Amount</span>
+                    </div>
+                    <div class="cart-items">
+                        <div class="cart-row">
+                        <div class="cart-item cart-column">
+                          <a href="./sanPham10.html">
+                            <img class="cart-item-image" src="../img/ao khoac nu.png" width="100" height="100"></a>
+                            <span class="cart-item-title">Chunky wool belt sweater</span>
+                        </div>
+                        <span class="cart-price cart-column">$ 2,500</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input" type="number" value="1">
+                            <button class="btn btn-danger" type="button">Delete</button>
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                          <a href="./sanPham13.html">
+                            <img class="cart-item-image" src="../img/men.png" width="100" height="100"></a>
+                            <span class="cart-item-title">Backpack with Web stripe</span>
+                        </div>
+                        <span class="cart-price cart-column">$ 1,770</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input" type="number" value="2">
+                            <button class="btn btn-danger" type="button">Delete</button>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total:</strong>
+                        <span class="cart-total-price">$ 4,270</span>
+                        <br>
+                        <br>
+                        <a class="btn abate" type="button" href="./thanhToan.html">ABATE</a>
+                    </div>
+                </div>
+                
+    </article>
+    </div>
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>C</span>har<span>L</span>es</h1>
+      </div>
+      <h2>Prestige is the factor that makes greatness</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/vinh.nguyenhuu.33671748"><img src="../img/Facebook-logo-2021-300x300.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/vinhkhanh9382/"><img src="../img/R (1).png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://twitter.com/home"><img src="../img/R.png" /></a>
+        </div>
+      </div>
+      <p>© 2016 - 2021 Charles S.p.A. - All rights reserved. G Commerce Europe S.p.A. - IT VAT nr 0965434569. SIAE LICENCE # 2294/I/1979 and 5647/I/1962</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script>
+    // xóa cart
+var remove_cart = document.getElementsByClassName("btn-danger");
+for (var i = 0; i < remove_cart.length; i++) {
+  var button = remove_cart[i]
+  button.addEventListener("click", function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+  })
+}
+// update cart 
+function updatecart() {
+    var cart_item = document.getElementsByClassName("cart-items")[0];
+    var cart_rows = cart_item.getElementsByClassName("cart-row");
+    var total = 0;
+    for (var i = 0; i < cart_rows.length; i++) {
+      var cart_row = cart_rows[i]
+      var price_item = cart_row.getElementsByClassName("cart-price ")[0]
+      var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
+      var price = parseFloat(price_item.innerText)// chuyển một chuổi string sang number để tính tổng tiền.
+      var quantity = quantity_item.value // lấy giá trị trong thẻ input
+      total = total + (price * quantity)
+    }
+    document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+    // Thay đổi text = total trong .cart-total-price. Chỉ có một .cart-total-price nên mình sử dụng [0].
+  }
+  // thay đổi số lượng sản phẩm
+var quantity_input = document.getElementsByClassName("cart-quantity-input");
+for (var i = 0; i < quantity_input.length; i++) {
+  var input = quantity_input[i];
+  input.addEventListener("change", function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+// Thêm vào giỏ
+var add_cart = document.getElementsByClassName("btn-cart");
+for (var i = 0; i < add_cart.length; i++) {
+  var add = add_cart[i];
+  add.addEventListener("click", function (event) {
+
+    var button = event.target;
+    var product = button.parentElement.parentElement;
+    var img = product.parentElement.getElementsByClassName("img-prd")[0].src
+    var title = product.getElementsByClassName("content-product-h3")[0].innerText
+    var price = product.getElementsByClassName("price")[0].innerText
+    addItemToCart(title, price, img)
+    // Khi thêm sản phẩm vào giỏ hàng thì sẽ hiển thị modal
+    modal.style.display = "block";
+    
+    updatecart()
+  })
+}
+
+function addItemToCart(title, price, img) {
+  var cartRow = document.createElement('div')
+  cartRow.classList.add('cart-row')
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  var cart_title = cartItems.getElementsByClassName('cart-item-title')
+  for (var i = 0; i < cart_title.length; i++) {
+    if (cart_title[i].innerText == title) {
+      alert('Sản Phẩm Đã Có Trong Giỏ Hàng')
+      return
+    }
+  }
+
+  var cartRowContents = `
+  <div class="cart-item cart-column">
+      <img class="cart-item-image" src="${img}" width="100" height="100">
+      <span class="cart-item-title">${title}</span>
+  </div>
+  <span class="cart-price cart-column">${price}</span>
+  <div class="cart-quantity cart-column">
+      <input class="cart-quantity-input" type="number" value="1">
+      <button class="btn btn-danger" type="button">Xóa</button>
+  </div>`
+  cartRow.innerHTML = cartRowContents
+  cartItems.append(cartRow)
+  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+    updatecart()
+  })
+  cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+  </script>
+
+</html>

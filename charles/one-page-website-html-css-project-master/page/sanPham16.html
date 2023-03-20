@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>	charles.com</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="../css/sanPham.css" rel="stylesheet">
+  <style>
+   .highlight-window {
+  height: 559px;
+  width: 400px;
+  background: #ccc;
+  background: url('../img/ccc.png');
+  background-size: cover;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position:relative;
+  background-position:center top;
+}
+.color-a {
+  background: #cfcece;
+  margin-right:14px;
+}
+
+.color-b {
+  background: rgb(29, 29, 29);
+}
+  </style>
+</head>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>c</span>har<span>l</span>es</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../index.html" data-after="Home">Home</a></li>
+            <li><a href="../index.html" data-after="Service">Gift</a></li>
+            <li><a href="../index.html" data-after="Projects">Product</a></li>
+            <li><a href="../index.html" data-after="About">About</a></li>
+            <li><a href="../index.html" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+        <a href="./gioHang.html">
+        <img class="gioHang" src="../img/kisspng-shopping-cart-software-computer-icons-5ade529492a245.5910015815245195726006.png">
+      </a>
+        <form action="" class="search-bar">
+          <input type="search" name="search" pattern=".*\S.*" placeholder="Search..." required>
+          <button class="search-btn" type="submit">
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+  <div class='container'>
+    <div class='background-element' id='background-element'>
+    </div>
+    <div class='highlight-window' id='product-img'><div class='highlight-overlay' id='highlight-overlay'></div></div>
+    <div class='window'>
+      <div class='main-content'>
+        <h2>Bomber Jacket</h2>
+        <h1>Children's leather Double G belt</h1>
+    <div class='description' id='description'>
+        One of Gucci's most emblematic designs, the loafer continues to be reimagined each season as an homage to the House's origins. Here, the style pairs black leather with beige and ebony GG Supreme canvas and a tassel detail for a contemporary take on the classic design.</div>
+        <div class='highlight-window  mobile' id='product-img'><div class='highlight-overlay' id='highlight-overlay-mobile'></div></div>
+        <div class='options'>
+          <div class='color-options'>
+            Color:
+        <div class='color-picker'>
+          <div class='color overlay' id='color-overlay'><div class='check'></div></div>
+          <div class='color color-a' id='color-a'></div>
+          <div class='color color-b' id='color-b'></div>
+        </div>
+                    <span class='small' style='color:#457'>COLOR: <span id='color-name'>BLACK / 2V5</span></span>
+          </div>
+          <div class='size-picker'>
+           Size:
+    <div class='range-picker' id='range-picker'>
+      <div>44</div><div>46</div><div>48</div><div class='active'>50</div><div>52</div><div>54</div>
+    </div>
+            <a class='small align-right' href='#'>VIEW SIZE-CHART</a>
+          </div>  
+      </div>
+              <div class='divider'></div>
+  
+            <div class='purchase-info'>
+        <div class='price'>$ 315</div>
+        <a href="./gioHang.html">
+              <button>ADD TO CART</button></a>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>C</span>har<span>L</span>es</h1>
+      </div>
+      <h2>Prestige is the factor that makes greatness</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/vinh.nguyenhuu.33671748"><img src="../img/Facebook-logo-2021-300x300.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/vinhkhanh9382/"><img src="../img/R (1).png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://twitter.com/home"><img src="../img/R.png" /></a>
+        </div>
+      </div>
+      <p>© 2016 - 2021 Charles S.p.A. - All rights reserved. G Commerce Europe S.p.A. - IT VAT nr 0965434569. SIAE LICENCE # 2294/I/1979 and 5647/I/1962</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script>document.getElementById('range-picker').addEventListener('click', function(e) {
+    var sizeList = document.getElementById('range-picker').children;
+    for (var i = 0; i <= sizeList.length - 1; i++) {
+      console.log(sizeList[i].classList);
+      if (sizeList[i].classList.contains('active')) {
+        sizeList[i].classList.remove('active');
+      }
+    }
+    e.target.classList.add('active');
+  })
+  
+  document.getElementById('color-a').addEventListener('click', function() {
+    document.getElementById('color-overlay').style.transform = 'translateX(-0.5px)';
+    document.getElementById('background-element').style.backgroundColor = '#333';
+    document.getElementById('highlight-overlay').style.opacity = '1';
+    document.getElementById('highlight-overlay-mobile').style.opacity = '1';
+    document.getElementById('color-name').innerHTML = "WHILE / 050";
+    document.getElementById('color-name').style.color = '#333'
+  
+  })
+  document.getElementById('color-b').addEventListener('click', function() {
+    document.getElementById('color-overlay').style.transform = 'translateX(45px)';
+    document.getElementById('background-element').style.backgroundColor = '#457';
+    document.getElementById('highlight-overlay').style.opacity = '0';
+    document.getElementById('highlight-overlay-mobile').style.opacity = '0';
+    document.getElementById('color-name').innerHTML = "BLACK / 2V5";
+    document.getElementById('color-name').style.color = '#457'
+  })</script>
+
+</html>
